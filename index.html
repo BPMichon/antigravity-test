@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biome Swiper - Minecraft Edition</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Biome Swiper</h1>
+        <p>Decide the fate of 71 Minecraft biomes</p>
+      </header>
+
+      <main id="swiper-container">
+        <div id="card-stack">
+          <!-- Cards will be injected here -->
+          <div class="loader">Loading Biomes...</div>
+        </div>
+
+        <div class="controls">
+          <button id="btn-no" class="swipe-btn" aria-label="Dislike">✕</button>
+          <button id="btn-info" class="swipe-btn-small" aria-label="Toggle Image Type">
+            <span class="icon">📷</span>
+            <span class="label">Vanilla</span>
+          </button>
+          <button id="btn-yes" class="swipe-btn" aria-label="Like">❤</button>
+        </div>
+      </main>
+
+      <section id="results-screen" class="hidden">
+        <h2>Your Adventure Awaits</h2>
+        <div class="results-layout">
+          <div class="result-column">
+            <h3>Liked Biomes</h3>
+            <ul id="liked-list"></ul>
+          </div>
+          <div class="result-column">
+            <h3>Disliked Biomes</h3>
+            <ul id="disliked-list"></ul>
+          </div>
+        </div>
+        <button id="btn-restart">Start Over</button>
+      </section>
+    </div>
+    <script type="module" src="/main.ts"></script>
+  </body>
+</html>
